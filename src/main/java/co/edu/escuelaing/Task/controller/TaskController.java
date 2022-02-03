@@ -75,6 +75,7 @@ public class TaskController {
             task.setDescription(taskDto.getDescription());
             task.setStatus(taskDto.getStatus());
             task.setAssignedTo(taskDto.getAssignedTo());
+            task.setDueDate(taskDto.getDueDate());
             taskService.update(task,id);
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         } catch (Exception e) {
