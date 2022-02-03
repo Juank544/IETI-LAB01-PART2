@@ -1,6 +1,8 @@
 package co.edu.escuelaing.Task.dto;
 
-public class TaskDto {
+import java.io.Serializable;
+
+public class TaskDto implements Serializable {
     private String name;
     private String description;
     private String status;
