@@ -59,6 +59,7 @@ public class TaskController {
             task.setAssignedTo(taskDto.getAssignedTo());
             task.setDueDate(taskDto.getDueDate());
             task.setCreated(dtf.format(now));
+            taskService.create(task);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (Exception e) {
             Logger.getLogger(TaskController.class.getName()).log(Level.SEVERE,null,e);
